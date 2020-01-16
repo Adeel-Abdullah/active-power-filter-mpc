@@ -7,11 +7,12 @@ for i = 1:length(vars)
 end
 clear('Ts');
 
-global Ts L v states
+global Ts L v R states
 
 Ts = 2e-6;
 L = AF.activefilter.Laf;
 Vdc = AF.activefilter.voltage*100;
+R = 1;
 
 % Voltage vectors
 v0 = 0;
