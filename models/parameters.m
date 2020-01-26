@@ -11,7 +11,8 @@ global Ts L v R states
 
 Ts = 2e-6;
 L = AF.activefilter.Laf;
-Vdc = AF.activefilter.voltage*2;
+% Vdc = AF.activefilter.voltage*3;
+Vdc = 1200;
 R = 1;
 
 % Voltage vectors
