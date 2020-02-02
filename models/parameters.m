@@ -1,3 +1,4 @@
+clear;
 newData1 = load('-mat', "matlab");
 
 % Create new variables in the base workspace from those fields.
