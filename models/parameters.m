@@ -10,7 +10,7 @@ clear('Ts');
 
 global Ts L v R states
 
-Ts = 2e-6;
+Ts = 2e-5;
 L = AF.activefilter.Laf;
 % Vdc = AF.activefilter.voltage*3;
 Vdc = 1200;
