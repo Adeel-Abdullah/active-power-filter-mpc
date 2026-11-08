@@ -48,6 +48,8 @@ The earlier controller predicts the next current for each of eight inverter volt
 | Gate generation | Direct state selection | Separate PWM block |
 | Previous-step memory | Selected vector index and measured current | Optimized voltage and measured current |
 
+The intended approach is to optimize the voltage command within the inverter's achievable voltage region and reuse the previous optimum to initialize the next sampling interval.
+
 This redesign separates predictive voltage calculation from gate-pulse generation. The live controller is embedded in the MATLAB Function block inside the **Shunt active harmonic filter** subsystem of `models/power_active_filter_mpc.slx`.
 
 Standalone implementations in [`work/sgd_opt.m`](work/sgd_opt.m) and [`work/fcs_opt.m`](work/fcs_opt.m) make the two approaches accessible for comparison. Despite its filename, `sgd_opt.m` performs deterministic gradient updates rather than stochastic sampling.
